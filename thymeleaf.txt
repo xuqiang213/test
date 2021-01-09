@@ -1,0 +1,32 @@
+使用thymeleaf需要先导入头文件
+xmlns:th="http://www.thymeleaf.org"
+
+如果需要导入路径需要写
+th:属性="@{路径}"
+
+路径携带参数
+th:属性="@{路径(参数)}"
+
+赋值
+th:text="${值}"
+
+
+国际化
+th:属性="#{配置文件中选取}"
+
+
+条件判断
+th:if="${(非空)not或! #strings.isEmpty(值)}"
+
+
+抽取页面模块
+th:fragment="自定以名字"   replace
+ 
+提取页面模块
+th:insert="~{页面::抽取的模块}"
+
+可以使用三模运算符
+值？条件1：条件2
+
+循环遍历
+th:each="取值"
